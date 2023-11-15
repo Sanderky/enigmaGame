@@ -1,0 +1,36 @@
+<div class="main">
+    <div class="content">
+        <div class="imgWrapper">
+            <img src="assets/howToPlay.png" alt="dupa">
+        </div>
+        <div class="manual">{{ translate('howToPlayManual') }}</div>
+        <div class="controls">
+            <div class="title">{{ translate('controls') }}</div>
+            <div class="keyboard">
+                <div>
+                    <div class="keyName">{{ translate('enter') }}</div>
+                    <div class="keyAction">{{ translate('accept') }}</div>
+                </div>
+                <div>
+                    <div class="keyName">{{ translate('leftArrow') }}</div>
+                    <div class="keyAction">{{ translate('swipeLeft') }}</div>
+                </div>
+                <div>
+                    <div class="keyName">{{ translate('rightArrow') }}</div>
+                    <div class="keyAction">{{ translate('swipeRight') }}</div>
+                </div>
+                <div>
+                    <div class="keyName">{{ translate('topArrow') }}</div>
+                    <div class="keyAction">{{ translate('selectTopList') }}</div>
+                </div>
+                <div>
+                    <div class="keyName">{{ translate('bottomArrow') }}</div>
+                    <div class="keyAction">{{ translate('selectBottomList') }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <button (click)="goToMainMenu()" class="menuBtn">{{ translate('menu') }}</button>
+    </footer>
+</div>

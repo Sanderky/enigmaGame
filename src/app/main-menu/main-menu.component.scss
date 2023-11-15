@@ -1,0 +1,45 @@
+@import "../../colors.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 3rem;
+
+  img {
+    height: auto;
+    width: 80px;
+  }
+}
+
+:host {
+  flex-grow: 1;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+
+  button {
+    font-size: 2rem;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: padding 150ms;
+    margin-bottom: 1rem;
+
+    &:hover {
+      padding-left: 1rem;
+    }
+  }
+}

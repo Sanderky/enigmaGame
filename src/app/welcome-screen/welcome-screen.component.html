@@ -1,0 +1,11 @@
+<div class="main">
+    <div class="helloBox">
+        <div [ngStyle]="{'visibility': isLoading ? 'hidden' : 'visible'}">{{ translate('hello')}}</div>
+        <img src="assets/logo.svg" alt="logo" [ngClass]="{'rotateAnimation': isLoading}">
+        <div>{{ isLoading ? translate('loading') + '...' : translate('startInfo')}}</div>
+        <button [ngStyle]="{'visibility': isLoading ? 'hidden' : 'visible'}" (click)="onStart()" [disabled]="isLoading">{{ translate('start')}}</button>
+    </div>
+    <div class="exit">
+        <button (click)="exitGame()" [ngStyle]="{'visibility': isLoading ? 'hidden' : 'visible'}" [disabled]="isLoading" >{{ translate('exit')}}</button>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+<div [ngClass]="{'unselected': !selected}" class="main">
+    <div class="wrapper">
+        <img src={{getPatternPath(true)}} alt="">
+        <img src={{getPatternPath(false)}} alt="">
+    </div>
+    <div class="label">{{ label }}</div>
+</div>

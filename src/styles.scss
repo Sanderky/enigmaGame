@@ -1,0 +1,57 @@
+@import './colors.scss';
+
+@font-face {
+    font-family: "JetBrainsMono-Regular";  
+    src: local("JetBrainsMono-Regular"),
+      url("./fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "JetBrainsMono-Bold";  
+    src: local("JetBrainsMono-Bold"),
+      url("./fonts/JetBrainsMono-Bold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "JetBrainsMono-Light";  
+    src: local("JetBrainsMono-Light"),
+      url("./fonts/JetBrainsMono-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Terminal";  
+    src: local("Modeseven-L3n5"),
+      url("./fonts/Modeseven-L3n5.ttf") format("truetype");
+  }
+  
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "JetBrainsMono-Regular", monospace;
+    // font-family: "Terminal", monospace;
+    user-select: none;
+    color: $primary;
+}
+
+img {
+  pointer-events: none;
+}
+
+body {
+    background-color: $black;
+    width: 100vw;
+    height: 100vh;
+    padding: 1rem;
+}
+
+@keyframes barAnimation {  
+    
+  from {
+      width: 0;
+  } 
+  
+  to {
+      width: 100%;
+  }
+}

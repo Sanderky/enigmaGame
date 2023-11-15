@@ -1,0 +1,3 @@
+<div class="main">
+    <app-card *ngFor="let card of cards; index as i" [topPattern]="cards[i].topPattern" [bottomPattern]="cards[i].bottomPattern" [label]="'0' + (i + 1)" [selected]="selectedCard === i"/>
+</div>

@@ -1,0 +1,32 @@
+<div class="main">
+    <div class="wrapper">
+        <div class="wrapperEdges">
+            <div class="rows">
+        
+                <div #topList class="topRow" ngModel>
+                    <div class="rowItem" *ngFor="let item of topRow; index as i">
+                        <img [ngClass]="{'selected': (!selectorPosition && i === 4) || (!isMovingRight && !isMovingLeft && i === 4)}" src={{getPath(topRow[i])}} alt="">
+                    </div>
+                </div>
+            
+            
+                <div #bottomList class="bottomRow">
+                    <div *ngFor="let item of bottomRow, index as i">
+                        <img [ngClass]="{'selected': (selectorPosition && i === 4) ||  (!isMovingRight && !isMovingLeft && i === 4)}" src={{getPath(bottomRow[i])}} alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="frame"><div></div></div>
+    </div>
+
+    <div class="selector" [ngStyle]="{'top': selectorPosition ? '0px' : '102px'}">
+        <div class="selector-arrowLeft"><div [@arrowLeft]="arrowLeftAnimationState ? 'open' : 'closed'"></div></div>
+        <div class="selector-frame">
+            <div></div>
+        </div>
+        <div class="selector-arrowRight"><div [@arrowRight]="arrowRightAnimationState ? 'open' : 'closed'"></div></div>
+    </div>
+
+</div>

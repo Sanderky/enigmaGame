@@ -1,0 +1,30 @@
+@import "../../../../colors.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  width: min-content;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid $primary;
+  padding: 5px;
+
+  img {
+    height: auto;
+    width: 6rem;
+  }
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.unselected {
+  opacity: 0.1;
+}

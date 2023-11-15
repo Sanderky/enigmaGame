@@ -1,0 +1,129 @@
+@import "../../../colors.scss";
+
+.main {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.selector {
+  transition: top 150ms;
+  position: absolute;
+  height: 104px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 918px 1fr;
+
+  .selector-frame {
+    display: flex;
+    justify-content: center;
+
+    & > div {
+      height: 100%;
+      width: 104px;
+      border: 2px solid $primary;
+    }
+  }
+
+  .selector-arrowRight {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 1rem;
+
+    & > div {
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-left: 30px solid $primary;
+      border-bottom: 15px solid transparent;
+    }
+  }
+
+  .selector-arrowLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+
+    & > div {
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-right: 30px solid $primary;
+      border-bottom: 15px solid transparent;
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+}
+
+.wrapperEdges {
+  width: 916px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2px;
+  width: 918px;
+}
+
+.frame {
+  height: 206px;
+  width: 918px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  border-radius: 10px;
+  border: 2px solid rgba($primaryRgb, 0.2);
+
+  & > div {
+    height: 2px;
+    width: 100%;
+    background-color: rgba($primaryRgb, 0.2);
+  }
+}
+
+.topRow,
+.bottomRow {
+  transition: left 300ms;
+  position: relative;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2px;
+  height: 100px;
+  width: 100%;
+
+  & > div {
+    border-right: 2px solid rgba($primaryRgb, 0.2);
+    height: 100px;
+    width: 102px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+  }
+}
+
+.selected {
+  opacity: 1 !important;
+}
+
+img {
+  height: 80px;
+  width: 80px;
+  display: block;
+  margin: 10px;
+  opacity: 0.25;
+}

@@ -1,0 +1,105 @@
+@import "../../colors.scss";
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+:host {
+  flex-grow: 1;
+}
+
+.gameContent {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.warning {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 200px solid $primary;
+  animation: blink 1s steps(5, start) infinite;
+  margin-bottom: 2rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100px;
+    left: -50px;
+    display: block;
+    height: 0;
+    width: 0;
+    z-index: 2;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-top: 100px solid $black;
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.gameOver {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+
+  .gameOver-title {
+    font-size: 3rem;
+  }
+
+  .gameOver-subtitle {
+    font-size: 2rem;
+  }
+}
+
+.gameWin {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & > div {
+    font-size: 3rem;
+  }
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .menuBtn {
+    transition: padding 150ms;
+    &:hover {
+      padding-left: 1rem;
+    }
+  }
+
+  .restartBtn {
+    transition: padding 150ms;
+    &:hover {
+      padding-right: 1rem;
+    }
+  }
+}

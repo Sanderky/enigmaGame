@@ -1,0 +1,69 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+.rotateAnimation {
+  animation: helloBoxImgAnim infinite linear 2s;
+  transform: rotate(0deg);
+
+  @keyframes helloBoxImgAnim {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.helloBox {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    animation: helloBoxBtnAnim infinite linear 1s alternate;
+    opacity: 1;
+    margin-top: 1rem;
+
+    &:hover {
+      animation: none;
+    }
+    @keyframes helloBoxBtnAnim {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.exit {
+  button {
+    transition: padding 150ms;
+    &:hover {
+      padding-left: 1rem;
+    }
+  }
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+:host {
+  flex-grow: 1;
+}

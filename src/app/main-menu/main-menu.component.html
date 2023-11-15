@@ -1,0 +1,14 @@
+<div class="main">
+    <div class="logo">
+        <div>ENIGMA</div>
+        <img src="assets/logo.svg" alt="logo">
+    </div>
+    <div class="menu">
+        <button (click)="startGame()">{{ translate("play") }}</button>
+        <button (click)="goToHowToPlay()">{{ translate("howToPlay") }}</button>
+        <button (click)="onDifficultyChange()">{{ translate("difficulty") + ': ' + getDifficulty() }}</button>
+        <button (click)="onListAnimationToggle()">{{ translate("listAnimation") + ': ' + (listAnimation ?  translate("yes") : translate("no"))}}</button>
+        <button class="menu-language" (click)="setNextLang()">{{ translate("language") + ': ' + getCurrentLanguage() }}</button>
+        <button (click)="exitGame()">{{ translate("exit") }}</button>
+    </div>
+</div>

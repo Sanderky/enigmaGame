@@ -1,0 +1,25 @@
+<div class="main">
+    <div class="gameContent" *ngIf="isInGame()">
+        <app-progress-bar [difficultyTimeSeconds]="difficultyTimeSeconds" (timeLeftEvent)="onTimeLeft()" [resetTimerEvent]="restartTimerEvent.asObservable()"></app-progress-bar>
+        <app-cards style="margin-top: 3rem;" [cards]="cards" [selectedCard]="selectedCodeCardIndex"></app-cards>
+        <app-card-selector style="margin-top: 5rem;" [topRow]="selectorRows.topRow" [bottomRow]="selectorRows.bottomRow" (selectPatternsEvent)="checkUserSelection($event)"></app-card-selector>
+    </div>
+
+    <div class="gameOver" *ngIf="isGameOver()">
+        <div class="warning">
+            <div class="warningContent">
+            </div>
+        </div>
+        <div class="gameOver-title">{{ translate('gameOver') }}</div>
+        <div class="gameOver-subtitle">{{ translate('tryAgain') }}</div>
+    </div>
+
+    <div class="gameWin" *ngIf="isGameWin()">
+        <div>{{ translate('gameWin') }}</div>
+    </div>
+
+    <footer>
+        <button (click)="goToMainMenu()" class="menuBtn">{{ translate('menu') }}</button>
+        <button (click)="restartGame()" class="restartBtn">{{ translate('restart') }}</button>
+    </footer>
+</div>
